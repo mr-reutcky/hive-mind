@@ -150,7 +150,7 @@ header {
 }
 
 
-.profile-image {
+.profile-image, .contact-image {
   height: 150px;
   width: 150px;
   display: grid;
@@ -214,8 +214,6 @@ header {
   border-radius: 6px;
 }
 
-
-
 .ad-text {
   font-size: 15px;
   font-weight: 300;
@@ -252,7 +250,7 @@ header {
 
 .user-feed {
   margin-top: 75px;
-  height: 100%;
+  height: 200%;
   display: grid;
   gap: 20px;
   background-color: red;
@@ -276,7 +274,6 @@ header {
 }
 
 .post-options {
-  background-color: orange;
   display: grid;
   grid-template-columns: 1fr 0.25fr;
   place-items: center;
@@ -296,6 +293,22 @@ header {
   height: 100%;
   border-radius: 25px;
   background-color: purple;
+  cursor: pointer;
+  transition: var(--app-hover-transition);
+}
+
+.image-post:hover, .article-post:hover, .video-post:hover {
+  scale: 1.03;
+}
+
+.post-button svg {
+  cursor: pointer;
+  transition: var(--app-hover-transition);
+}
+
+.post-button svg:hover {
+  scale: 1.05;
+  color: #feb825
 }
 
 
@@ -305,10 +318,12 @@ header {
 
 .user-connections {
   margin-top: 75px;
-  height: 400px;
+  height: fit-content;
   display: grid;
   gap: 10px;
+  padding: 0 10px 10px;
   background-color: orange;
+  border-radius: 25px;
 }
 
 .connections-title {
@@ -323,6 +338,7 @@ header {
   padding: 10px;
   gap: 10px;
   height: 80px;
+  border-radius: 25px;
   background-color: purple;
 }
 
@@ -337,9 +353,51 @@ header {
   background-color: blue;
   height: 60px;
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-.go-to-profile {
+.contact-name {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.contact-location {
+  font-size: 14px;
+  font-weight: 200;
+}
+
+.go-to-profile, .add-user {
   font-size: 24px;
   background-color: transparent;
+}
+
+/* ----------------------------------- */
+/*    Users you May know section       */
+/* ----------------------------------- */
+
+.people-you-may-know {
+  margin-top: -70px;
+  height: fit-content;
+  display: grid;
+  grid-column: 3;
+  gap: 10px;
+  padding: 5px 10px 10px;
+  border-radius: 25px;
+  background-color: yellow;
+}
+
+.people-title {
+  font-size: 20px;
+  justify-self: center;
+  font-weight: 500;
+}
+
+.people-title i {
+  margin-right: 10px;
+}
+
+.add-user {
+  font-size: 20px;
 }
