@@ -318,10 +318,12 @@ header {
 
 .user-connections {
   margin-top: 75px;
-  height: 400px;
+  height: fit-content;
   display: grid;
   gap: 10px;
+  padding: 0 10px 10px;
   background-color: orange;
+  border-radius: 25px;
 }
 
 .connections-title {
@@ -336,6 +338,7 @@ header {
   padding: 10px;
   gap: 10px;
   height: 80px;
+  border-radius: 25px;
   background-color: purple;
 }
 
@@ -350,6 +353,19 @@ header {
   background-color: blue;
   height: 60px;
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.contact-name {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.contact-location {
+  font-size: 14px;
+  font-weight: 200;
 }
 
 .go-to-profile, .add-user {
@@ -363,15 +379,18 @@ header {
 
 .people-you-may-know {
   margin-top: -70px;
+  height: fit-content;
   display: grid;
-  text-align: center;
   grid-column: 3;
   gap: 10px;
+  padding: 5px 10px 10px;
+  border-radius: 25px;
   background-color: yellow;
 }
 
 .people-title {
   font-size: 20px;
+  justify-self: center;
   font-weight: 500;
 }
 
