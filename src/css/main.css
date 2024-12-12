@@ -1,3 +1,92 @@
 @charset "utf-8";
 
 @import url(./utils.css);
+
+header {
+  height: 65px;
+  line-height: 65px;
+  background-color: rgb(0 0 0 / 80%);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  align-items: center; /* Vertically center items */
+  justify-content: space-between;
+  padding: 0 20px; /* Add padding to the sides */
+
+  img {
+    height: 50px;
+    aspect-ratio: 1;
+    cursor: pointer;
+  }
+
+  input[type=text] {
+    width: 150px;
+    height: 30px;
+    border-radius: 50px;
+    border: none;
+    padding: 0 10px;
+    font-size: 1.5rem;
+    margin: 10px 0 0 20px;
+  }
+
+  .radio-button {
+    position: relative;
+    appearance: none;
+    border: 2px solid transparent;
+    padding: 10px 20px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    height: 35px;
+    background-color: transparent;
+    margin: 7px 10px 0 10px; /* Add margin to maintain gap */
+  }
+
+  .radio-button::after {
+    content: attr(label);
+    color: #fff;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    font-weight: 500;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    white-space: nowrap; /* Prevent text from wrapping */
+  }
+
+  .radio-button:checked::after {
+    background-color: #ffcb37;
+    padding: 5px 10px;
+    border-radius: 6px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .circle {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #ffcb37;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 10px;
+    cursor: pointer;
+    margin-top: 6px;
+  }
+
+  .circle i {
+    font-size: 2rem;
+    color: #fff;
+  }
+
+  .picture {
+    background-color: #fd03e8;
+  }
+}
