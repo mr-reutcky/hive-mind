@@ -3,13 +3,14 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "lite-server"
   },
   "keywords": [],
-  "author": "",
+  "author": "Samuel Reutcky, Dave Sommerville, and Myles Reid",
   "license": "ISC",
   "description": "",
-  "dependencies": {
+  "devDependencies": {
     "lite-server": "^2.6.1"
   }
 }
