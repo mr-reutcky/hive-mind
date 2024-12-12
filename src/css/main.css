@@ -6,11 +6,13 @@
   --app-main-bg: #1a1d28;
 
   --app-img-clip: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+
+  --app-hover-transition: all 0.25s ease-in-out;
 }
 
 main {
-  background: var(--app-main-bg) url(../img/hexa-bg.jpg) no-repeat center center/cover;
-  height: 200svh;
+  background: var(--app-main-bg) url(../img/hexa-bg.jpg) no-repeat center center/cover scroll;
+  height: 220svh;
 }
 
 .wrapper {
@@ -18,7 +20,7 @@ main {
   grid-template-columns: 1fr 2fr 1fr;
   height: 100svh;
   gap: 40px;
-  padding-top: 40px;
+  z-index: 1;
 }
 
 /* ----------------------------------- */
@@ -36,6 +38,7 @@ header {
   align-items: center; /* Vertically center items */
   justify-content: space-between;
   padding: 0 20px; /* Add padding to the sides */
+  z-index: 2;
 
   img {
     height: 50px;
@@ -94,7 +97,7 @@ header {
   .circle {
     width: 40px;
     height: 40px;
-    border-radius: 50%;
+    clip-path: var(--app-img-clip);
     background-color: #ffcb37;
     display: flex;
     align-items: center;
@@ -120,19 +123,128 @@ header {
 
 .user-profile {
   margin-top: 75px;
-  height: 400px;
+  height: 500px;
   display: grid;
-  background-color: blue;
+  background-color: #ffd69c;
   justify-items: center;
-  padding: 10px;
+  text-align: center;
+  gap: 10px;
+  padding: 0 20px 30px;
+  border-radius: 25px;
 }
+
+.edit-profile {
+  place-self: end;
+  position: relative;
+  top: 15px;
+  right: 5px;
+}
+
+.edit-profile i {
+  cursor: pointer;
+  transition: var(--app-hover-transition);
+}
+
+.edit-profile i:hover {
+  scale: 1.05;
+}
+
 
 .profile-image {
   height: 150px;
   width: 150px;
+  display: grid;
+  place-items: center;
   background-color: green;
   clip-path: var(--app-img-clip);
 }
+
+.user-name {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.user-title, .user-location {
+  font-size: 14px;
+  font-weight: 200;
+}
+
+.user-status {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+/* Creating a line above the stats */
+.user-stats::before {
+  content: '';
+  position: absolute;
+  left: 0px;
+  top: -8px;
+  height: 0.5px;
+  width: 100%;
+  background-color: white;
+}
+
+.user-stats {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20px;
+  color: white;
+  position: relative; 
+}
+
+.user-stats h5 {
+  font-size: 16px;
+  font-weight: 500;
+}
+.user-stats p {
+  font-size: 16px;
+  font-weight: 300;
+}
+
+.connection-number, .posts-number {
+  background-color: #ffffff73;
+  color: #000;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 70px;
+  width: 90px;
+  border-radius: 6px;
+}
+
+
+
+.ad-text {
+  font-size: 15px;
+  font-weight: 300;
+  margin-bottom: 5px;
+}
+
+.upgrade-button {
+  padding: 5px 20px;
+  border-radius: 25px;
+  background-color: #db6f02;
+  color: white;
+  transition: var(--app-hover-transition); 
+  text-align: center;
+  align-items: center;
+}
+
+.upgrade-button i {
+  margin-right: 5px;
+  font-size: 16px;
+  color: #ffb825;
+
+}
+
+.upgrade-button:hover {
+  scale: 1.01;
+  background-color: #ee7902;
+  box-shadow: 1px 1px 1px 1px #00000050;
+}
+
 
 /* ----------------------------------- */
 /*         User Feed section           */
