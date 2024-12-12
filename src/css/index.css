@@ -5,9 +5,6 @@
 body {
   font-family: Arial, sans-serif;
 }
-.flex {
-  display: flex;
-}
 
 :root {
   --clr-page-bg: #fefefe;
@@ -29,8 +26,9 @@ main {
   width: auto;
   margin-left: 50px;
 }
+
 h2 {
-  font-size: 2.8rem;
+  font-size: 6rem;
   color: var(--clr-text);
   line-height: 100px;
   text-align: center;
@@ -58,6 +56,7 @@ h2 {
   border-radius: var(--app-border-rad);
   background-color: var(--clr-form-bg);
 }
+
 .form-group input[type="checkbox"] {
   margin-right: 5px;
 }
@@ -86,6 +85,10 @@ h2 {
     font-size: 1.6rem;
     font-weight: 600;
     cursor: pointer;
+
+    &:hover {
+      filter: brightness(0.85);
+    }
   }
   .login-btn {
     background-color: var(--clr-accent);

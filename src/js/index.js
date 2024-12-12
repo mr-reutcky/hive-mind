@@ -1,13 +1,6 @@
 'use strict';
+import { select, listen } from './utils.js';
 
-// import { select, listen } from './utils';
-function select(selector, scope = document) {
-  return scope.querySelector(selector);
-}
-
-function listen(event, selector, callback) {
-  return selector.addEventListener(event, callback);
-}
 const loginForm = select('.login-form');
 const usernameInput = select('.username-input');
 const passwordInput = select('.password-input');
@@ -67,7 +60,7 @@ listen('click', loginButton, () => {
         localStorage.removeItem('password');
       }
       alert('Login successful!');
-      window.location.href = 'https://github.com/mr-reutcky/hive-mind';
+      window.location.href = './home.html';
     } else {
       alert('Invalid username or password.');
     }
@@ -76,4 +69,3 @@ listen('click', loginButton, () => {
 
 //    Must remove alerts!! 
 
-import { select, listen } from './utils.js';
