@@ -6,6 +6,8 @@
   --app-main-bg: #1a1d28;
 
   --app-img-clip: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+
+  --app-hover-transition: all 0.25s ease-in-out;
 }
 
 main {
@@ -124,7 +126,7 @@ header {
 .user-profile {
   height: 500px;
   display: grid;
-  background-color: #fbb912;
+  background-color: #ffd69c;
   justify-items: center;
   text-align: center;
   gap: 10px;
@@ -137,6 +139,15 @@ header {
   position: relative;
   top: 15px;
   right: 5px;
+}
+
+.edit-profile i {
+  cursor: pointer;
+  transition: var(--app-hover-transition);
+}
+
+.edit-profile i:hover {
+  scale: 1.05;
 }
 
 
@@ -194,7 +205,8 @@ header {
 }
 
 .connection-number, .posts-number {
-  background-color: #00000057;
+  background-color: #ffffff73;
+  color: #000;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -214,12 +226,24 @@ header {
 .upgrade-button {
   padding: 5px 20px;
   border-radius: 25px;
+  background-color: #db6f02;
+  color: white;
+  transition: var(--app-hover-transition); 
+  text-align: center;
+  align-items: center;
 }
 
 .upgrade-button i {
   margin-right: 5px;
   font-size: 16px;
-  color: gold;
+  color: #ffb825;
+
+}
+
+.upgrade-button:hover {
+  scale: 1.01;
+  background-color: #ee7902;
+  box-shadow: 1px 1px 1px 1px #00000050;
 }
 
 
