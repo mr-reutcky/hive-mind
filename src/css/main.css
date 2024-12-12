@@ -150,7 +150,7 @@ header {
 }
 
 
-.profile-image {
+.profile-image, .contact-image {
   height: 150px;
   width: 150px;
   display: grid;
@@ -214,8 +214,6 @@ header {
   border-radius: 6px;
 }
 
-
-
 .ad-text {
   font-size: 15px;
   font-weight: 300;
@@ -252,7 +250,7 @@ header {
 
 .user-feed {
   margin-top: 75px;
-  height: 100%;
+  height: 200%;
   display: grid;
   gap: 20px;
   background-color: red;
@@ -339,7 +337,33 @@ header {
   width: 100%;
 }
 
-.go-to-profile {
+.go-to-profile, .add-user {
   font-size: 24px;
   background-color: transparent;
+}
+
+/* ----------------------------------- */
+/*    Users you May know section       */
+/* ----------------------------------- */
+
+.people-you-may-know {
+  margin-top: -70px;
+  display: grid;
+  text-align: center;
+  grid-column: 3;
+  gap: 10px;
+  background-color: yellow;
+}
+
+.people-title {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.people-title i {
+  margin-right: 10px;
+}
+
+.add-user {
+  font-size: 20px;
 }
