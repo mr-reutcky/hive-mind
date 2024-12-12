@@ -12,7 +12,6 @@ const loginButton = select('.login-btn');
 localStorage.setItem('savedUsername', 'testUser');
 localStorage.setItem('savedPassword', 'testPass');
 
-
 function validateForm() {
   let isValid = true;
 
@@ -51,21 +50,19 @@ listen('click', loginButton, () => {
 
     if (enteredUsername === savedUsername && enteredPassword === savedPassword) {
       if (rememberMeCheckbox.checked) {
-        localStorage.setItem('rememberMe', 'true');
-        localStorage.setItem('username', enteredUsername);
-        localStorage.setItem('password', enteredPassword);
+        if (!localStorage.getItem('rememberMe')) {
+          localStorage.setItem('rememberMe', 'true');
+          localStorage.setItem('username', enteredUsername);
+          localStorage.setItem('password', enteredPassword);
+        }
       } else {
         localStorage.setItem('rememberMe', 'false');
         localStorage.removeItem('username');
         localStorage.removeItem('password');
       }
-      alert('Login successful!');
       window.location.href = './home.html';
     } else {
-      alert('Invalid username or password.');
+      passwordError.innerText = 'Invalid username or password.';
     }
   }
 });
-
-//    Must remove alerts!! 
-
