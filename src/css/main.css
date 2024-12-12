@@ -4,6 +4,8 @@
 
 :root {
   --app-main-bg: #1a1d28;
+
+  --app-img-clip: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
 }
 main {
   background: var(--app-main-bg) url(../img/hexa-bg.jpg) no-repeat center center/cover;
@@ -30,7 +32,7 @@ main {
   height: 150px;
   width: 150px;
   background-color: green;
-  clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+  clip-path: var(--app-img-clip);
 }
 
 .user-feed {
@@ -40,5 +42,40 @@ main {
 
 .user-connections {
   height: 400px;
+  display: grid;
+  gap: 10px;
   background-color: orange;
+}
+
+.connections-title {
+  justify-self: center;
+  font-size: 26px;
+}
+
+.connection-box {
+  display: grid;
+  grid-template-columns: 1fr 2.5fr .5fr;
+  place-items: center;
+  padding: 10px;
+  gap: 10px;
+  height: 80px;
+  background-color: purple;
+}
+
+.contact-image {
+  height: 50px;
+  width: 50px;
+  background-color: green;
+  clip-path: var(--app-img-clip);
+}
+
+.contact-info {
+  background-color: blue;
+  height: 60px;
+  width: 100%;
+}
+
+.go-to-profile {
+  font-size: 24px;
+  background-color: transparent;
 }
