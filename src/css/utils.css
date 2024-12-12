@@ -4,3 +4,15 @@
   width: min(100% - 32px, 1200px);
   margin-inline: auto;
 }
+
+.flex {
+  display: flex;
+}
+
+.flex-between {
+  justify-content: space-between;
+}
+
+.gap-20 {
+  gap: 20px;
+}
