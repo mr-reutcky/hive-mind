@@ -12,13 +12,11 @@
 
 main {
   background: var(--app-main-bg) url(../img/hexa-bg.jpg) no-repeat center center/cover scroll;
-  height: 120svh;
+  height: 220svh;
 }
 
 .wrapper {
   display: grid;
-  position: relative;
-  top: 105px;
   grid-template-columns: 1fr 2fr 1fr;
   height: 100svh;
   gap: 40px;
@@ -124,6 +122,7 @@ header {
 /* ----------------------------------- */
 
 .user-profile {
+  margin-top: 75px;
   height: 500px;
   display: grid;
   background-color: #ffd69c;
@@ -252,6 +251,7 @@ header {
 /* ----------------------------------- */
 
 .user-feed {
+  margin-top: 75px;
   height: 100%;
   display: grid;
   gap: 20px;
@@ -304,6 +304,7 @@ header {
 /* ----------------------------------- */
 
 .user-connections {
+  margin-top: 75px;
   height: 400px;
   display: grid;
   gap: 10px;

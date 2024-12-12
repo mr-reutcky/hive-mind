@@ -1,13 +1,6 @@
 'use strict';
+import { select, listen } from './utils.js';
 
-// import { select, listen } from './utils';
-function select(selector, scope = document) {
-  return scope.querySelector(selector);
-}
-
-function listen(event, selector, callback) {
-  return selector.addEventListener(event, callback);
-}
 const loginForm = select('.login-form');
 const usernameInput = select('.username-input');
 const passwordInput = select('.password-input');
@@ -18,7 +11,6 @@ const loginButton = select('.login-btn');
 
 localStorage.setItem('savedUsername', 'testUser');
 localStorage.setItem('savedPassword', 'testPass');
-
 
 function validateForm() {
   let isValid = true;
@@ -58,22 +50,19 @@ listen('click', loginButton, () => {
 
     if (enteredUsername === savedUsername && enteredPassword === savedPassword) {
       if (rememberMeCheckbox.checked) {
-        localStorage.setItem('rememberMe', 'true');
-        localStorage.setItem('username', enteredUsername);
-        localStorage.setItem('password', enteredPassword);
+        if (!localStorage.getItem('rememberMe')) {
+          localStorage.setItem('rememberMe', 'true');
+          localStorage.setItem('username', enteredUsername);
+          localStorage.setItem('password', enteredPassword);
+        }
       } else {
         localStorage.setItem('rememberMe', 'false');
         localStorage.removeItem('username');
         localStorage.removeItem('password');
       }
-      alert('Login successful!');
-      window.location.href = 'https://github.com/mr-reutcky/hive-mind';
+      window.location.href = './home.html';
     } else {
-      alert('Invalid username or password.');
+      passwordError.innerText = 'Invalid username or password.';
     }
   }
 });
-
-//    Must remove alerts!! 
-
-import { select, listen } from './utils.js';
