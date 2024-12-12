@@ -10,7 +10,7 @@
 
 main {
   background: var(--app-main-bg) url(../img/hexa-bg.jpg) no-repeat center center/cover;
-  height: 100svh;
+  height: 200svh;
 }
 
 .wrapper {
@@ -119,6 +119,7 @@ header {
 /* ----------------------------------- */
 
 .user-profile {
+  margin-top: 75px;
   height: 400px;
   display: grid;
   background-color: blue;
@@ -138,6 +139,7 @@ header {
 /* ----------------------------------- */
 
 .user-feed {
+  margin-top: 75px;
   height: 100%;
   display: grid;
   gap: 20px;
@@ -190,6 +192,7 @@ header {
 /* ----------------------------------- */
 
 .user-connections {
+  margin-top: 75px;
   height: 400px;
   display: grid;
   gap: 10px;
