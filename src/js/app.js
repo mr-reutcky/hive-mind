@@ -1,3 +1,3 @@
 'use strict';
 
-import { select, listen } from './utils';
+import { select, listen } from './utils.js';
