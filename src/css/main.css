@@ -274,7 +274,6 @@ header {
 }
 
 .post-options {
-  background-color: orange;
   display: grid;
   grid-template-columns: 1fr 0.25fr;
   place-items: center;
@@ -294,6 +293,22 @@ header {
   height: 100%;
   border-radius: 25px;
   background-color: purple;
+  cursor: pointer;
+  transition: var(--app-hover-transition);
+}
+
+.image-post:hover, .article-post:hover, .video-post:hover {
+  scale: 1.03;
+}
+
+.post-button svg {
+  cursor: pointer;
+  transition: var(--app-hover-transition);
+}
+
+.post-button svg:hover {
+  scale: 1.05;
+  color: #feb825
 }
 
 
