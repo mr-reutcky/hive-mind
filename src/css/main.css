@@ -358,7 +358,12 @@ header {
   gap: 10px;
   height: 80px;
   border-radius: var(--app-border-rad);
-  background-color: purple;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.connection-box:hover {
+  background-color: #f9f9f9;
 }
 
 .contact-image {
@@ -369,12 +374,15 @@ header {
 }
 
 .contact-info {
-  background-color: blue;
   height: 60px;
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+.fa-arrow-right {
+  font-size: 1.7rem;
 }
 
 .contact-name {
@@ -390,6 +398,10 @@ header {
 .go-to-profile, .add-user {
   font-size: 24px;
   background-color: transparent;
+}
+
+.fa-user-plus {
+  font-size: 1.7rem;
 }
 
 /* ----------------------------------- */
