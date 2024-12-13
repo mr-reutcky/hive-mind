@@ -6,15 +6,6 @@ body {
   font-family: Arial, sans-serif;
 }
 
-:root {
-  --clr-page-bg: #fff;
-  --clr-form-bg:#fcf5ee;
-  --clr-accent: #fcd483;
-  --clr-dark-accent: #fe521d;
-  --clr-text: #012;
-  --app-border-rad: 12px;
-}
-
 main {
   justify-content: space-between;
   align-items: center;
