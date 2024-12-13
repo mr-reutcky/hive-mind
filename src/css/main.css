@@ -8,11 +8,12 @@
   --app-img-clip: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
 
   --app-hover-transition: all 0.25s ease-in-out;
+
+  --app-box-shadow: 0 2px 4px rgb(0 0 0 / 20%);
 }
 
 main {
   background-color: #f9f9f9;
-  height: 220svh;
 }
 
 .wrapper {
@@ -133,6 +134,7 @@ header {
   height: 500px;
   display: grid;
   background-color: var(--app-box-color);
+  box-shadow: var(--app-box-shadow);
   justify-items: center;
   text-align: center;
   gap: 10px;
@@ -272,6 +274,7 @@ header {
   padding: 20px;
   border-radius: var(--app-border-rad);
   background-color: var(--app-box-color);
+  box-shadow: var(--app-box-shadow);
 }
 
 .text-box {
@@ -342,8 +345,12 @@ header {
   width: 100%;
   border-radius: 6px;
   gap: 15px;
-  background-color: #ebebeb;
-  border: 1px solid rgb(0 0 0 / 25%);
+  background-color: #fff;
+  box-shadow: var(--app-box-shadow);
+}
+
+.feed-post:last-of-type {
+  margin-bottom: 15px;
 }
 
 .head {
@@ -406,7 +413,7 @@ header {
 }
 
 .likes .fa-thumbs-up {
-  color: blue;
+  color: #5183e0;
 }
 
 .comments {
@@ -421,7 +428,7 @@ header {
   position: absolute;
   width: 0%; 
   height: 1px;
-  background-color: blue;
+  background-color: #5183e0;
   transition: var(--app-hover-transition);
 }
 
@@ -430,7 +437,7 @@ header {
 }
 
 .comments:hover {
-  color: blue;
+  color: #5183e0;
 }
 
 
@@ -459,6 +466,7 @@ header {
   min-width: calc(25% - 10px);
   cursor: pointer;
   transition: var(--app-hover-transition);
+  border-radius: var(--app-border-rad);
 }
 
 .option p {
@@ -468,7 +476,6 @@ header {
 .option:hover {
   /* can change this color to match the color of the button on log-in */
   background-color: #ee7902;
-  border-radius: var(--app-border-rad);
 }
 
 
@@ -490,6 +497,7 @@ header {
   padding: 0 10px 10px;
   background-color: var(--app-box-color);
   border-radius: var(--app-border-rad);
+  box-shadow: var(--app-box-shadow);
 }
 
 .connections-title {
@@ -516,8 +524,12 @@ header {
 .contact-image {
   height: 50px;
   width: 50px;
-  background-color: green;
+  background-color: transparent;
   clip-path: var(--app-img-clip);
+}
+
+.contact-profile {
+  background-color: transparent;
 }
 
 .contact-info {
@@ -564,6 +576,7 @@ header {
   padding: 5px 10px 10px;
   border-radius: var(--app-border-rad);
   background-color: var(--app-box-color);
+  box-shadow: var(--app-box-shadow);
 }
 
 .people-title {
