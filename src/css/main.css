@@ -62,7 +62,6 @@ header {
   .radio-button {
     position: relative;
     appearance: none;
-    border: 2px solid transparent;
     padding: 10px 20px;
     border-radius: 6px;
     display: flex;
@@ -88,28 +87,31 @@ header {
   }
 
   .radio-button:checked::after {
-    border: 2px solid transparent;
+    padding: 5px 10px;
+    border-radius: 6px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .radio-button:checked::after {
+    color: var(--clr-dark-accent);
+  }
+
+  .radio-button::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 3px;
     background-color: var(--clr-dark-accent);
-    padding: 5px 10px;
-    border-radius: 6px;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    transition: all 0.25s ease-in-out;
   }
 
-  .radio-button:hover::after {
-    border: 2px solid var(--clr-light-accent);
-    padding: 5px 10px;
-    border-radius: 6px;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .radio-button:checked:hover::after {
-    background-color: var(  --clr-light-accent);
+  .radio-button:checked::before {
+    width: 100%;
   }
 
   .icons {
