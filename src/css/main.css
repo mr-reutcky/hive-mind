@@ -18,7 +18,8 @@ main {
 .wrapper {
   display: grid;
   grid-template-columns: 1fr 2fr 1fr;
-  height: 100svh;
+  grid-template-rows: 1fr;
+  height: fit-content;
   gap: 40px;
   z-index: 1;
 }
@@ -258,8 +259,8 @@ header {
 
 .user-feed {
   margin-top: 75px;
-  height: 200%;
   display: grid;
+  grid-row: -2 -1;
   gap: 20px;
 }
 
@@ -334,13 +335,155 @@ header {
   color: #feb825
 }
 
+.feed-post {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  width: 100%;
+  border-radius: 6px;
+  gap: 15px;
+  background-color: #ebebeb;
+  border: 1px solid rgb(0 0 0 / 25%);
+}
+
+.head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 50px;
+}
+
+.user {
+  display: flex;
+  padding-left: 10px;
+}
+
+.profile-pic {
+  height: 38px;
+  width: 38px;
+  clip-path: var(--app-img-clip);
+  margin-right: 10px;
+}
+
+.post-user-name {
+  line-height: 30px;
+  font-size: 16px;
+  font-weight: 00;
+}
+
+.date {
+  font-size: 14px;
+  font-weight: 400;
+  margin-right: 10px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+}
+
+.text {
+  margin: 0 15px 10px 15px;
+  height: auto;
+}
+
+.interactions {
+  height: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.likes {
+  display: flex;
+  min-width: 60px;
+  align-items: center;
+  justify-content: space-evenly;
+  font-size: 16px;
+  font-weight: 200;
+}
+
+.likes .fa-thumbs-up {
+  color: blue;
+}
+
+.comments {
+  font-weight: 200;
+  cursor: pointer;
+  position: relative;
+  transition: var(--app-hover-transition);
+}
+
+.comments::after {
+  content: "";
+  position: absolute;
+  width: 0%; 
+  height: 1px;
+  background-color: blue;
+  transition: var(--app-hover-transition);
+}
+
+.comments:hover::after {
+  width: 100%;
+}
+
+.comments:hover {
+  color: blue;
+}
+
+
+.interaction-options {
+  display: flex;
+  justify-content: space-evenly;
+  position: relative;
+  height: 40px;
+  margin-bottom: 5px;
+}
+
+.interaction-options::before {
+  content: '';
+  position: absolute;
+  left: 30px;
+  top: -5px;
+  height: 0.5px;
+  width: 90%;
+  background-color: #000;
+}
+
+.option {
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+  min-width: calc(25% - 10px);
+  cursor: pointer;
+  transition: var(--app-hover-transition);
+}
+
+.option p {
+  margin-left: 10px;
+}
+
+.option:hover {
+  /* can change this color to match the color of the button on log-in */
+  background-color: #ee7902;
+  border-radius: var(--app-border-rad);
+}
+
+
+
 
 /* ----------------------------------- */
 /*     User Connections section        */
 /* ----------------------------------- */
 
-.user-connections {
+.networking {
+  height: fit-content;
   margin-top: 75px;
+}
+
+.user-connections {
   height: fit-content;
   display: grid;
   gap: 10px;
@@ -413,7 +556,7 @@ header {
 /* ----------------------------------- */
 
 .people-you-may-know {
-  margin-top: -70px;
+  margin-top: 50px;
   height: fit-content;
   display: grid;
   grid-column: 3;
