@@ -38,33 +38,65 @@
     <main>
       <div class="container">
         <div class="wrapper">
-          <aside class="user-profile">
-            <div class="edit-profile"><i class="fa-solid fa-pen"></i></div>
-            <figure class="profile-image">
-              <img src="./src/img/profile-pic.jpg" alt="BEST TEACHER EVER!!!">
-            </figure>
-            <div class="user-info">
-              <h4 class="user-name">Andre Specht</h4>
-              <p class="user-title">Software and Web Development Instructor</p>
-              <p class="user-location">Winnipeg, MB</p>
-            </div>
-            <div class="user-stats">
-              <div class="connection-number">
-                <h5>Contacts</h5>
-                <p>355</p>
+          <div>
+            <aside class="user-profile">
+              <div class="edit-profile"><i class="fa-solid fa-pen"></i></div>
+              <figure class="profile-image">
+                <img src="./src/img/profile-pic.jpg" alt="BEST TEACHER EVER!!!">
+              </figure>
+              <div class="user-info">
+                <h4 class="user-name">Andre Specht</h4>
+                <p class="user-title">Software and Web Development Instructor</p>
+                <p class="user-location">Winnipeg, MB</p>
               </div>
-              <div class="posts-number">
-                <h5>Posts</h5>
-                <p>40</p>
+              <div class="user-stats">
+                <div class="connection-number">
+                  <h5>Contacts</h5>
+                  <p>355</p>
+                </div>
+                <div class="posts-number">
+                  <h5>Posts</h5>
+                  <p>40</p>
+                </div>
               </div>
-            </div>
-            <div class="premium-ad">
-              <p class="ad-text">Gain access to all features with premium</p>
-              <button class="upgrade-button">
-                <i class="fa-solid fa-crown"></i>Upgrade
-              </button>
-            </div>
-          </aside>
+              <div class="premium-ad">
+                <p class="ad-text">Gain access to all features with premium</p>
+                <button class="upgrade-button">
+                  <i class="fa-solid fa-crown"></i>Upgrade
+                </button>
+              </div>
+            </aside>
+            <aside class="navigation flex">
+              <ul class="icons">
+                <li>
+                  <i class="fa-solid fa-bookmark"></i> 
+                </li>
+                <li>
+                  <i class="fa-solid fa-people-group"></i> 
+                </li>
+                <li>
+                  <i class="fa-solid fa-newspaper"></i> 
+                </li>
+                <li>
+                  <i class="fa-regular fa-calendar-days"></i> 
+                </li>
+              </ul>
+              <ul>
+                <li>
+                  Saved
+                </li>
+                <li>
+                  Groups
+                </li>
+                <li>
+                  Newsletters
+                </li>
+                <li>
+                  Events
+                </li>
+              </ul>
+            </aside>  
+          </div>
           <section class="user-feed">
             <div class="post-box">
               <textarea class="text-box" placeholder="What's on your mind?"></textarea>
@@ -430,70 +462,12 @@
                   <i class="fa-solid fa-arrow-right"></i>
                 </button>
               </div>
-              <button class="go-to-profile">
-                <i class="fa-solid fa-arrow-right"></i>
-              </button>
-            </div>
-          </aside>
-          <aside class="navigation flex">
-            <ul class="icons">
-              <li>
-                <i class="fa-solid fa-bookmark"></i> 
-              </li>
-              <li>
-                <i class="fa-solid fa-people-group"></i> 
-              </li>
-              <li>
-                <i class="fa-solid fa-newspaper"></i> 
-              </li>
-              <li>
-                <i class="fa-regular fa-calendar-days"></i> 
-              </li>
-            </ul>
-            <ul>
-              <li>
-                Saved
-              </li>
-              <li>
-                Groups
-              </li>
-              <li>
-                Newsletters
-              </li>
-              <li>
-                Events
-              </li>
-            </ul>
-          </aside>
-          <aside class="people-you-may-know">
-            <h4 class="people-title">
-            <i class="fa-solid fa-users"></i>Others You May Know
-            </h4>
+            </aside>
+            <aside class="people-you-may-know">
+              <h4 class="people-title">
+                <i class="fa-solid fa-users"></i>Others You May Know
+              </h4>
               <div class="connection-box">
-              <figure class="contact-image">
-                <img src="" alt="" class="contact-profile">
-              </figure>
-              <div class="contact-info">
-                <h4 class="contact-name"></h4>
-                <p class="contact-location"></p>
-              </div>
-              <button class="add-user">
-                <i class="fa-solid fa-user-plus"></i>
-              </button>
-            </div>
-            <div class="connection-box">
-              <figure class="contact-image">
-                <img src="" alt="" class="contact-profile">
-              </figure>
-              <div class="contact-info">
-                <h4 class="contact-name"></h4>
-                <p class="contact-location"></p>
-              </div>
-              <button class="add-user">
-                <i class="fa-solid fa-user-plus"></i>
-              </button>
-            </div>
-            <div class="connection-box">
                 <figure class="contact-image">
                   <img src="" alt="" class="contact-profile">
                 </figure>
@@ -504,6 +478,30 @@
                 <button class="add-user">
                   <i class="fa-solid fa-user-plus"></i>
                 </button>
+              </div>
+              <div class="connection-box">
+                <figure class="contact-image">
+                  <img src="" alt="" class="contact-profile">
+                </figure>
+                <div class="contact-info">
+                  <h4 class="contact-name"></h4>
+                  <p class="contact-location"></p>
+                </div>
+                <button class="add-user">
+                  <i class="fa-solid fa-user-plus"></i>
+                </button>
+              </div>
+              <div class="connection-box">
+                  <figure class="contact-image">
+                    <img src="" alt="" class="contact-profile">
+                  </figure>
+                  <div class="contact-info">
+                    <h4 class="contact-name"></h4>
+                    <p class="contact-location"></p>
+                  </div>
+                  <button class="add-user">
+                    <i class="fa-solid fa-user-plus"></i>
+                  </button>
               </div>
             </aside>
           </div>
