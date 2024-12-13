@@ -8,12 +8,11 @@
   --app-img-clip: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
 
   --app-hover-transition: all 0.25s ease-in-out;
-
-  --app-box-shadow: 0 2px 2px rgb(0 0 0 / 15%);
 }
 
 main {
   background-color: #f9f9f9;
+  height: 220svh;
 }
 
 .wrapper {
@@ -33,14 +32,13 @@ header {
   height: 65px;
   line-height: 65px;
   background-color: rgb(0 0 0 / 60%);
-  backdrop-filter: blur(5px) saturate(120%);
   position: fixed;
   top: 0;
   width: 100%;
   display: flex;
-  align-items: center; /* Vertically center items */
+  align-items: center;
   justify-content: space-between;
-  padding: 0 20px; /* Add padding to the sides */
+  padding: 0 20px;
   z-index: 2;
 
   img {
@@ -62,7 +60,6 @@ header {
   .radio-button {
     position: relative;
     appearance: none;
-    border: 2px solid transparent;
     padding: 10px 20px;
     border-radius: 6px;
     display: flex;
@@ -88,29 +85,33 @@ header {
   }
 
   .radio-button:checked::after {
-    border: 2px solid transparent;
+    padding: 5px 10px;
+    border-radius: 6px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .radio-button:checked::after {
+    color: var(--clr-dark-accent);
+  }
+
+  .radio-button::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 3px;
     background-color: var(--clr-dark-accent);
-    padding: 5px 10px;
-    border-radius: 6px;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    transition: all 0.25s ease-in-out;
   }
 
-  .radio-button:hover::after {
-    border: 2px solid var(--clr-light-accent);
-    padding: 5px 10px;
-    border-radius: 6px;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  .radio-button:checked::before {
+    width: 100%;
   }
 
-  .radio-button:checked:hover::after {
-    background-color: var(  --clr-light-accent);
-  }
 
   .icons {
     width: 270px;
@@ -132,7 +133,7 @@ header {
   }
 
   .circle:hover {
-    background-color: var(--clr-light-accent);
+    background-color: var(  --clr-light-accent);
   }
 
   .circle i {
@@ -159,7 +160,6 @@ header {
   height: 500px;
   display: grid;
   background-color: var(--app-box-color);
-  box-shadow: var(--app-box-shadow);
   justify-items: center;
   text-align: center;
   gap: 10px;
@@ -192,6 +192,7 @@ header {
   width: 150px;
   display: grid;
   place-items: center;
+  background-color: green;
   clip-path: var(--app-img-clip);
 }
 
@@ -215,10 +216,10 @@ header {
   content: '';
   position: absolute;
   left: 0px;
-  top: -3px;
+  top: -8px;
   height: 0.5px;
   width: 100%;
-  background-color: #000;
+  background-color: white;
 }
 
 .user-stats {
@@ -226,6 +227,7 @@ header {
   display: flex;
   justify-content: space-between;
   padding: 0 20px;
+  color: white;
   position: relative; 
 }
 
@@ -239,6 +241,7 @@ header {
 }
 
 .connection-number, .posts-number {
+  background-color: #ffffff73;
   color: #000;
   display: flex;
   flex-direction: column;
@@ -255,7 +258,7 @@ header {
 }
 
 .upgrade-button {
-  padding: 5px 20px 8px;
+  padding: 5px 20px;
   border-radius: 25px;
   background-color: var(--clr-dark-accent);
   color: white;
@@ -271,49 +274,11 @@ header {
 }
 
 .upgrade-button:hover {
+  scale: 1.01;
   background-color: var(--clr-light-accent);
+  box-shadow: 1px 1px 1px 1px #00000050;
 }
 
-/* ----------------------------------- */
-/*         User Feed section           */
-/* ----------------------------------- */
-
-.navigation {
-  width: 300px;
-  height: fit-content;
-  border-radius: var(--app-border-rad);
-  background-color: var(--app-box-color);
-  padding: 25px 15px;
-  font-size: 1.8rem;
-  font-weight: 500;
-
-  li {
-    line-height: 50px;
-    cursor: pointer;
-    &:hover {
-      text-decoration: underline;
-    }
-  }
-
-  .icons li {
-    width: 40px;
-    text-align: center;
-    cursor: pointer;
-  }
-}
-
-ul {
-  text-decoration: none;
-  list-style-type: none;
-}
-
-.fa-people-group {
-  color: #a1a;
-}
-
-.fa-bookmark {
-  color: #555;
-}
 
 /* ----------------------------------- */
 /*         User Feed section           */
@@ -334,7 +299,6 @@ ul {
   padding: 20px;
   border-radius: var(--app-border-rad);
   background-color: var(--app-box-color);
-  box-shadow: var(--app-box-shadow);
 }
 
 .text-box {
@@ -372,7 +336,7 @@ ul {
 }
 
 .image-post:hover, .article-post:hover, .video-post:hover {
-  background-color: rgb(235 235 235 / 60%);
+  background-color: #f9f9f9;
 }
 
 .fa-image {
@@ -404,14 +368,9 @@ ul {
   height: auto;
   width: 100%;
   border-radius: 6px;
-  padding: 10px;
   gap: 15px;
-  background-color: var(--app-box-color);
-  box-shadow: var(--app-box-shadow);
-}
-
-.feed-post:last-of-type {
-  margin-bottom: 15px;
+  background-color: #ebebeb;
+  border: 1px solid rgb(0 0 0 / 25%);
 }
 
 .head {
@@ -474,7 +433,7 @@ ul {
 }
 
 .likes .fa-thumbs-up {
-  color: #5183e0;
+  color: blue;
 }
 
 .comments {
@@ -489,7 +448,7 @@ ul {
   position: absolute;
   width: 0%; 
   height: 1px;
-  background-color: #5183e0;
+  background-color: blue;
   transition: var(--app-hover-transition);
 }
 
@@ -498,7 +457,7 @@ ul {
 }
 
 .comments:hover {
-  color: #5183e0;
+  color: blue;
 }
 
 
@@ -527,7 +486,6 @@ ul {
   min-width: calc(25% - 10px);
   cursor: pointer;
   transition: var(--app-hover-transition);
-  border-radius: var(--app-border-rad);
 }
 
 .option p {
@@ -535,7 +493,9 @@ ul {
 }
 
 .option:hover {
-  background-color: rgb(235 235 235 / 60%);
+  /* can change this color to match the color of the button on log-in */
+  background-color: #ee7902;
+  border-radius: var(--app-border-rad);
 }
 
 
@@ -557,7 +517,6 @@ ul {
   padding: 0 10px 10px;
   background-color: var(--app-box-color);
   border-radius: var(--app-border-rad);
-  box-shadow: var(--app-box-shadow);
 }
 
 .connections-title {
@@ -584,12 +543,8 @@ ul {
 .contact-image {
   height: 50px;
   width: 50px;
-  background-color: transparent;
+  background-color: green;
   clip-path: var(--app-img-clip);
-}
-
-.contact-profile {
-  background-color: transparent;
 }
 
 .contact-info {
@@ -636,7 +591,6 @@ ul {
   padding: 5px 10px 10px;
   border-radius: var(--app-border-rad);
   background-color: var(--app-box-color);
-  box-shadow: var(--app-box-shadow);
 }
 
 .people-title {
