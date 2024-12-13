@@ -2,15 +2,6 @@
 
 @import url(./utils.css);
 
-:root {
-  --app-main-bg: #1a1d28;
-
-  --app-img-clip: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
-
-  --app-hover-transition: all 0.25s ease-in-out;
-
-  --app-box-shadow: 0 2px 2px rgb(0 0 0 / 15%);
-}
 
 main {
   background-color: #f9f9f9;
