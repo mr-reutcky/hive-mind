@@ -18,7 +18,8 @@ main {
 .wrapper {
   display: grid;
   grid-template-columns: 1fr 2fr 1fr;
-  height: 100svh;
+  grid-template-rows: 1fr;
+  height: fit-content;
   gap: 40px;
   z-index: 1;
 }
@@ -251,6 +252,7 @@ header {
 .user-feed {
   margin-top: 75px;
   display: grid;
+  grid-row: -2 -1;
   gap: 20px;
   background-color: red;
 }
@@ -453,8 +455,12 @@ header {
 /*     User Connections section        */
 /* ----------------------------------- */
 
-.user-connections {
+.networking {
+  height: fit-content;
   margin-top: 75px;
+}
+
+.user-connections {
   height: fit-content;
   display: grid;
   gap: 10px;
@@ -515,7 +521,7 @@ header {
 /* ----------------------------------- */
 
 .people-you-may-know {
-  margin-top: -70px;
+  margin-top: 50px;
   height: fit-content;
   display: grid;
   grid-column: 3;
