@@ -8,6 +8,9 @@
 .flex {
   display: flex;
 }
+.f-col {
+  flex-direction: column;
+}
 
 .flex-between {
   justify-content: space-between;
@@ -22,5 +25,6 @@
   --clr-form-bg:#f9f8f7;
   --clr-accent: #fcd483;
   --clr-text: #fbb201;
-  --app-border-rad: 8px;
+  --app-border-rad: 12px;
+  --app-box-color: #fff;
 }

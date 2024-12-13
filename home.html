@@ -28,10 +28,10 @@
           <input type="radio" class="radio-button" label="People" name="radiobtn">
           <input type="radio" class="radio-button" label="Watch" name="radiobtn">
         </div>
-        <div class="flex">
+        <div class="flex icons">
           <div class="circle"><i class="fa-solid fa-comment"></i></div>
           <div class="circle"><i class="fa-solid fa-bell"></i></div>
-          <div class="circle picture">pic</div>
+          <div class="circle picture"></div>
         </div>
       </div>
     </header>
@@ -40,14 +40,13 @@
         <div class="wrapper">
           <aside class="user-profile">
             <div class="edit-profile"><i class="fa-solid fa-pen"></i></div>
-            <figure class="profile-image"><img src="" alt="USER IMAGE HERE"></figure>
+            <figure class="profile-image">
+              <img src="./src/img/profile-pic.jpg" alt="BEST TEACHER EVER!!!">
+            </figure>
             <div class="user-info">
-              <h4 class="user-name">Name Here</h4>
-              <p class="user-title">Title Here</p>
-              <p class="user-location">Location here</p>
-            </div>
-            <div class="user-status">
-              <p class="user-status-text">cute and Quirky status text here</p>
+              <h4 class="user-name">Andre Specht</h4>
+              <p class="user-title">Software and Web Development Instructor</p>
+              <p class="user-location">Winnipeg, MB</p>
             </div>
             <div class="user-stats">
               <div class="connection-number">
@@ -61,7 +60,9 @@
             </div>
             <div class="premium-ad">
               <p class="ad-text">Gain access to all features with premium today</p>
-              <button class="upgrade-button"><i class="fa-solid fa-crown"></i>Upgrade</button>
+              <button class="upgrade-button">
+                <i class="fa-solid fa-crown"></i>Upgrade
+              </button>
             </div>
           </aside>
           <section class="user-feed">
@@ -69,9 +70,18 @@
               <textarea class="text-box" placeholder="What's on your mind?"></textarea>
               <div class="post-options">
                 <div class="post-type">
-                  <div class="image-post"></div>
-                  <div class="article-post"></div>
-                  <div class="video-post"></div>
+                  <div class="image-post flex">
+                    <i class="fa-regular fa-image fa-flip-horizontal"></i>
+                    <p>Media</p>
+                  </div>
+                  <div class="article-post flex">
+                    <i class="fa-solid fa-calendar-days"></i>
+                    <p>Event</p>
+                  </div>
+                  <div class="video-post flex">
+                    <i class="fa-solid fa-newspaper"></i>
+                    <p>Article</p>
+                  </div>
                 </div>
                 <div class="post-button">
                   <svg xmlns="http://www.w3.org/2000/svg" height="1.7em" fill="currentColor" viewBox="0 0 512 512">
@@ -381,7 +391,7 @@
                   <p class="contact-location">Contact Location</p>
                 </div>
                 <button class="go-to-profile">
-                  <i class="fa-regular fa-circle-right"></i>
+                  <i class="fa-solid fa-arrow-right"></i>
                 </button>
               </div>
               <div class="connection-box">
@@ -393,7 +403,7 @@
                   <p class="contact-location">Contact Location</p>
                 </div>
                 <button class="go-to-profile">
-                  <i class="fa-regular fa-circle-right"></i>
+                  <i class="fa-solid fa-arrow-right"></i>
                 </button>
               </div>
               <div class="connection-box">
@@ -405,7 +415,7 @@
                   <p class="contact-location">Contact Location</p>
                 </div>
                 <button class="go-to-profile">
-                  <i class="fa-regular fa-circle-right"></i>
+                  <i class="fa-solid fa-arrow-right"></i>
                 </button>
               </div>
               <div class="connection-box">
@@ -417,13 +427,39 @@
                   <p class="contact-location">Contact Location</p>
                 </div>
                 <button class="go-to-profile">
-                  <i class="fa-regular fa-circle-right"></i>
+                  <i class="fa-solid fa-arrow-right"></i>
                 </button>
               </div>
             </aside>
             <aside class="people-you-may-know">
-              <h4 class="people-title"><i class="fa-solid fa-users"></i>Others You May Know</h4>
+              <h4 class="people-title">
+              <i class="fa-solid fa-users"></i>Others You May Know
+            </h4>
               <div class="connection-box">
+              <figure class="contact-image">
+                <img src="" alt="IMAGE HERE" class="contact-profile">
+              </figure>
+              <div class="contact-info">
+                <h4 class="contact-name">Contact Name</h4>
+                <p class="contact-location">Contact Location</p>
+              </div>
+              <button class="add-user">
+                <i class="fa-solid fa-user-plus"></i>
+              </button>
+            </div>
+            <div class="connection-box">
+              <figure class="contact-image">
+                <img src="" alt="IMAGE HERE" class="contact-profile">
+              </figure>
+              <div class="contact-info">
+                <h4 class="contact-name">Contact Name</h4>
+                <p class="contact-location">Contact Location</p>
+              </div>
+              <button class="add-user">
+                <i class="fa-solid fa-user-plus"></i>
+              </button>
+            </div>
+            <div class="connection-box">
                 <figure class="contact-image">
                   <img src="" alt="IMAGE HERE" class="contact-profile">
                 </figure>
