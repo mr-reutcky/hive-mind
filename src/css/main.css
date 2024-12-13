@@ -2,15 +2,6 @@
 
 @import url(./utils.css);
 
-:root {
-  --app-main-bg: #1a1d28;
-
-  --app-img-clip: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
-
-  --app-hover-transition: all 0.25s ease-in-out;
-
-  --app-box-shadow: 0 2px 2px rgb(0 0 0 / 15%);
-}
 
 main {
   background-color: #f9f9f9;
@@ -558,7 +549,7 @@ ul {
   height: fit-content;
   display: grid;
   gap: 10px;
-  padding: 0 10px 10px;
+  padding: 10px;
   background-color: var(--app-box-color);
   border-radius: var(--app-border-rad);
   box-shadow: var(--app-box-shadow);
@@ -627,6 +618,35 @@ ul {
   font-size: 1.7rem;
 }
 
+.see-more {
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0.2px;
+  width: fit-content;
+  color: #306bda;
+  cursor: pointer;
+  position: relative;
+  justify-self: center;
+  text-transform: uppercase;
+}
+
+.see-more::after {
+  content: "";
+  position: absolute;
+  width: 0%; 
+  height: 1px;
+  background-color: #5183e0;
+  transition: var(--app-hover-transition);
+}
+
+.see-more:hover::after {
+  width: 100%;
+}
+
+.see-more:hover {
+  color: #5183e0;
+}
+
 /* ----------------------------------- */
 /*    Users you May know section       */
 /* ----------------------------------- */
@@ -637,7 +657,7 @@ ul {
   display: grid;
   grid-column: 3;
   gap: 10px;
-  padding: 5px 10px 10px;
+  padding: 10px;
   border-radius: var(--app-border-rad);
   background-color: var(--app-box-color);
   box-shadow: var(--app-box-shadow);
