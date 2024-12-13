@@ -11,7 +11,7 @@
 }
 
 main {
-  background: var(--app-main-bg) url(../img/hexa-bg.jpg) no-repeat center center/cover scroll;
+  background-color: #f9f9f9;
   height: 220svh;
 }
 
@@ -47,7 +47,7 @@ header {
   }
 
   input[type=text] {
-    width: 150px;
+    width: 200px;
     height: 30px;
     border-radius: 50px;
     border: none;
@@ -94,6 +94,11 @@ header {
     justify-content: center;
   }
 
+  .icons {
+    width: 270px;
+    justify-content: flex-end;
+  }
+
   .circle {
     width: 40px;
     height: 40px;
@@ -125,7 +130,7 @@ header {
   margin-top: 75px;
   height: 500px;
   display: grid;
-  background-color: #ffd69c;
+  background-color: var(--app-box-color);
   justify-items: center;
   text-align: center;
   gap: 10px;
@@ -253,7 +258,7 @@ header {
   height: 200%;
   display: grid;
   gap: 20px;
-  background-color: red;
+  background-color: var(--app-box-color);
 }
 
 .post-box {
@@ -262,7 +267,7 @@ header {
   width: 100%;
   height: 150px;
   padding: 20px;
-  background-color: yellow;
+  background-color: var(--app-box-color);
 }
 
 .text-box {
@@ -322,7 +327,7 @@ header {
   display: grid;
   gap: 10px;
   padding: 0 10px 10px;
-  background-color: orange;
+  background-color: var(--app-box-color);
   border-radius: 25px;
 }
 
@@ -385,7 +390,7 @@ header {
   gap: 10px;
   padding: 5px 10px 10px;
   border-radius: 25px;
-  background-color: yellow;
+  background-color: var(--app-box-color);
 }
 
 .people-title {
