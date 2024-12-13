@@ -33,6 +33,7 @@ header {
   height: 65px;
   line-height: 65px;
   background-color: rgb(0 0 0 / 60%);
+  backdrop-filter: blur(10px) saturate(120%);
   position: fixed;
   top: 0;
   width: 100%;
@@ -191,7 +192,6 @@ header {
   width: 150px;
   display: grid;
   place-items: center;
-  background-color: green;
   clip-path: var(--app-img-clip);
 }
 
@@ -376,7 +376,7 @@ ul {
 }
 
 .image-post:hover, .article-post:hover, .video-post:hover {
-  background-color: #f9f9f9;
+  background-color: rgb(235 235 235 / 60%);
 }
 
 .fa-image {
@@ -409,7 +409,7 @@ ul {
   width: 100%;
   border-radius: 6px;
   gap: 15px;
-  background-color: #fff;
+  background-color: var(--app-box-color);
   box-shadow: var(--app-box-shadow);
 }
 
@@ -538,8 +538,7 @@ ul {
 }
 
 .option:hover {
-  /* can change this color to match the color of the button on log-in */
-  background-color: #ee7902;
+  background-color: rgb(235 235 235 / 60%);
 }
 
 
