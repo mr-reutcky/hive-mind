@@ -118,7 +118,8 @@ header {
   }
 
   .picture {
-    background-color: #fd03e8;
+    background-color: var(--clr-text);
+    background: url(../img/profile-pic.jpg) center center / cover no-repeat;
   }
 }
 
@@ -154,6 +155,9 @@ header {
   scale: 1.05;
 }
 
+.profile-image {
+  background: url(../img/profile-pic.jpg) center center / cover no-repeat;
+}
 
 .profile-image, .contact-image {
   height: 150px;
