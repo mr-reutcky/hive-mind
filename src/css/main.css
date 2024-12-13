@@ -387,13 +387,34 @@ header {
 .comments {
   font-weight: 200;
   cursor: pointer;
+  position: relative;
+  transition: var(--app-hover-transition);
 }
+
+.comments::after {
+  content: "";
+  position: absolute;
+  width: 0%; 
+  height: 1px;
+  background-color: blue;
+  transition: var(--app-hover-transition);
+}
+
+.comments:hover::after {
+  width: 100%;
+}
+
+.comments:hover {
+  color: blue;
+}
+
 
 .interaction-options {
   display: flex;
   justify-content: space-evenly;
   position: relative;
   height: 40px;
+  margin-bottom: 5px;
 }
 
 .interaction-options::before {
@@ -412,10 +433,17 @@ header {
   justify-content: center; 
   min-width: calc(25% - 10px);
   cursor: pointer;
+  transition: var(--app-hover-transition);
 }
 
 .option p {
   margin-left: 10px;
+}
+
+.option:hover {
+  /* can change this color to match the color of the button on log-in */
+  background-color: #ee7902;
+  border-radius: var(--app-border-rad);
 }
 
 
