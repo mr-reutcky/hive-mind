@@ -34,10 +34,12 @@ async function main() {
 
   if (users) {
     populateConnections(users); 
+    populatePosts(users);
   }
 }
 
 const contactCards = selectAll('.connection-box'); 
+const feedPosts = selectAll('.feed-post')
 
 function populateConnections(users) {
 
@@ -54,6 +56,23 @@ function populateConnections(users) {
       contactLocation.textContent = `${user.location.city}`;
       contactImage.src = user.picture.medium; 
       contactImage.alt = `${user.name.first} ${user.name.last}`;
+    }
+  });
+}
+
+function populatePosts(users) {
+  const connectedUsers = users.slice(0, 4);
+  const usersPosting = connectedUsers.concat(connectedUsers);
+  usersPosting.sort(() => Math.random() - 0.5);
+
+  usersPosting.forEach((user, index) => {
+    if (feedPosts[index]) {
+      const postName = feedPosts[index].querySelector('.post-user-name');
+      const postUserImage = feedPosts[index].querySelector('.profile-pic');
+
+      postName.textContent = `${user.name.first} ${user.name.last}`;
+      postUserImage.src = user.picture.thumbnail;
+      postUserImage.alt = `${user.name.first} ${user.name.last}`;
     }
   });
 }
