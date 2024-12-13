@@ -60,6 +60,17 @@ function populateConnections(users) {
   });
 }
 
+function getRandomDate(start, end) {
+  const options = {
+    year: 'numeric',
+    month: 'short',
+    day: '2-digit'
+  }
+  const date = new Date(start.getTime() + Math.random() * (end.getTime() - start.getTime()))
+  
+  return date.toLocaleDateString('en-ca', options);
+}
+
 function populatePosts(users) {
   const connectedUsers = users.slice(0, 4);
   const usersPosting = connectedUsers.concat(connectedUsers);
@@ -69,12 +80,16 @@ function populatePosts(users) {
     if (feedPosts[index]) {
       const postName = feedPosts[index].querySelector('.post-user-name');
       const postUserImage = feedPosts[index].querySelector('.profile-pic');
+      const postDate = feedPosts[index].querySelector('.date');
 
+      
       postName.textContent = `${user.name.first} ${user.name.last}`;
       postUserImage.src = user.picture.thumbnail;
       postUserImage.alt = `${user.name.first} ${user.name.last}`;
+      postDate.textContent = getRandomDate(new Date(2023, 0, 1), new Date());
     }
   });
 }
+
 
 main();

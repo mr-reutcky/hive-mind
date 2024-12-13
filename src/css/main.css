@@ -250,7 +250,6 @@ header {
 
 .user-feed {
   margin-top: 75px;
-  height: 200%;
   display: grid;
   gap: 20px;
   background-color: red;
@@ -309,6 +308,14 @@ header {
 .post-button svg:hover {
   scale: 1.05;
   color: #feb825
+}
+
+.feed-post {
+  background-color: hotpink;
+  display: flex;
+}
+
+.head {
 }
 
 
