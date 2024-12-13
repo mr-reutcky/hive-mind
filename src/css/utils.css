@@ -8,6 +8,9 @@
 .flex {
   display: flex;
 }
+.f-col {
+  flex-direction: column;
+}
 
 .flex-between {
   justify-content: space-between;
